@@ -1,0 +1,16 @@
+body{
+    font-family: Arial;
+    text-align: center;
+    margin-top: 100px;
+}
+input{
+    padding: 8px;
+    margin: 5px;
+}
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+}
+h2{
+    margin-top: 20px;
+}
