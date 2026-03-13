@@ -1,2 +1,12 @@
-# BMI-App
-I made a bmi app since I like to exercise a lot and stay fit
+BMI Calculator Web App
+
+Features
+- Metric and Imperial units
+- BMI calculation
+- Health category detection
+- Color-coded results
+
+Technologies
+- HTML
+- CSS
+- JavaScript
