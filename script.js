@@ -15,9 +15,8 @@ let totalInches = (feet * 12) + inches;
     if(unit ==="imperial"){
         bmi = (weight * 703) / (height * height);
     }
-    if(weight === "" || height === ""){
-    alert("Please enter weight and height");
-    return;
+    if(weight.getText().isEmpty() || height.getText().isEmpty())
+        alert("Please enter weight and/or height");
     }
     
 
