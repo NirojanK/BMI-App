@@ -5,6 +5,7 @@ function calculateBMI(){
 
     let feet = parseInt(document.getElementById("feet").value);
     let inches = parseInt(document.getElementById("inches").value);
+    let totalInches = (feet * 12) + inches;
 
 let totalInches = (feet * 12) + inches;
 
@@ -14,10 +15,16 @@ let totalInches = (feet * 12) + inches;
     if(unit ==="imperial"){
         bmi = (weight * 703) / (height * height);
     }
+    if(weight === "" || height === ""){
+    alert("Please enter weight and height");
+    return;
+    }
+    
 
     bmi = bmi.toFixed(1);
 
     let category;
+    
 
     if(bmi < 18.5){
         category = "Underweight";
