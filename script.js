@@ -3,6 +3,11 @@ function calculateBMI(){
     let height = document.getElementById("height").value;
     let unit = document.getElementById("unit").value;
 
+    let feet = parseInt(document.getElementById("feet").value);
+    let inches = parseInt(document.getElementById("inches").value);
+
+let totalInches = (feet * 12) + inches;
+
     if(unit === "metric"){
         bmi = weight / (height *height);
     }
