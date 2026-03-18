@@ -1,49 +1,49 @@
 function calculateBMI(){
-    let weight = document.getElementById("weight").value;
-    let height = document.getElementById("height").value;
+    let weight = parseFloat(document.getElementById("weight").value);
+    let height = parseFloat(document.getElementById("height").value);
     let unit = document.getElementById("unit").value;
+    let totalInches = height;
 
-    let feet = parseInt(document.getElementById("feet").value);
-    let inches = parseInt(document.getElementById("inches").value);
-    let totalInches = (feet * 12) + inches;
+    let bmi;
+    let color;
 
-let totalInches = (feet * 12) + inches;
+    // Validation
+    if(!weight || (unit === "metric" && !height) || (unit === "imperial" && !totalInches)){
+        alert("Please enter valid weight and height");
+        return;
+    }
 
+    // BMI calculation
     if(unit === "metric"){
-        bmi = weight / (height *height);
+        bmi = weight / (height * height);
+    } 
+    else if(unit === "imperial"){
+        bmi = (weight * 703) / (totalInches * totalInches);
     }
-    if(unit ==="imperial"){
-        bmi = (weight * 703) / (height * height);
-    }
-    if(weight.getText().isEmpty() || height.getText().isEmpty())
-        alert("Please enter weight and/or height");
-    }
-    
 
     bmi = bmi.toFixed(1);
 
     let category;
-    
 
     if(bmi < 18.5){
         category = "Underweight";
-        color = blue;
+        color = "blue";
     }
     else if(bmi < 25){
         category = "Normal weight";
-        color = green;
+        color = "green";
     }
     else if(bmi < 30){
         category = "Overweight";
-        color = orange;
+        color = "orange";
     }
     else{
         category = "Obese";
-        color = red;
+        color = "red";
     }
 
-    document.getElementById("result").innerText = "BMI: " +bmi + " (" + category + ")";
-    result.innerText = "BMI: " +bmi+ " (" + category + ")";
+    let result = document.getElementById("result");
+    result.innerText = "BMI: " + bmi + " (" + category + ")";
     result.style.color = color;
-    
+    result.innerText += " - Healthy BMI range: 18.5 to 24.9";
 }
