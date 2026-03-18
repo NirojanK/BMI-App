@@ -2,7 +2,7 @@ function calculateBMI(){
     let weight = parseFloat(document.getElementById("weight").value);
     let height = parseFloat(document.getElementById("height").value);
     let unit = document.getElementById("unit").value;
-    let totalInches = height;
+    let totalInches = (feet * 12) + inches;
 
     let bmi;
     let color;
@@ -14,13 +14,14 @@ function calculateBMI(){
     }
 
     // BMI calculation
-    if(unit === "metric"){
-        bmi = weight / (height * height);
-    } 
-    else if(unit === "imperial"){
-        bmi = (weight * 703) / (totalInches * totalInches);
-    }
+    
 
+if(unit === "metric"){
+    bmi = weight / (height * height);
+} 
+else if(unit === "imperial"){
+    bmi = (weight * 703) / (totalInches * totalInches);
+}
     bmi = bmi.toFixed(1);
 
     let category;
@@ -46,4 +47,24 @@ function calculateBMI(){
     result.innerText = "BMI: " + bmi + " (" + category + ")";
     result.style.color = color;
     result.innerText += " - Healthy BMI range: 18.5 to 24.9";
+
+    result.classList.remove("show");
+
+setTimeout(() => {
+    result.classList.add("show");
+}, 50);
+}
+function toggleUnits(){
+    let unit = document.getElementById("unit").value;
+
+    let metric = document.getElementById("metricInputs");
+    let imperial = document.getElementById("imperialInputs");
+
+    if(unit === "metric"){
+        metric.classList.add("show");
+        imperial.classList.remove("show");
+    } else {
+        imperial.classList.add("show");
+        metric.classList.remove("show");
+    }
 }
