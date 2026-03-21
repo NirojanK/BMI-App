@@ -10,6 +10,7 @@ body {
     align-items: center;       /* vertical center */
     height: 100vh;
     margin: 0;
+    font-family: consoloas, monospace;
 }
 
 .container {
