@@ -60,6 +60,7 @@ button:active {
 .scale {
   border: 2px solid #4CAF50;
   padding: 10px;
+  box-shadow: inset 0 0 10px #4CAF50;
 }
 
 .fade {
