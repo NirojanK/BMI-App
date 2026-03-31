@@ -43,6 +43,7 @@ dot {
   background-color: #4CAF50;
   border-radius: 50%;
   display: inline-block;
+  margin: 10px;
 }
 input, select {
     width: 90%;
