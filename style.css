@@ -48,6 +48,11 @@ dot {
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
+@keyframes animation{
+    from{background-color: #4CAF50;}
+    to{background-color: blanchedalmond;}
+}
+
 input, select {
     width: 90%;
     padding: 8px;
