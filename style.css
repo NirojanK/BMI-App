@@ -44,6 +44,9 @@ dot {
   border-radius: 50%;
   display: inline-block;
   margin: 10px;
+  animation-name: animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 input, select {
     width: 90%;
