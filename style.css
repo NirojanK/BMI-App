@@ -1,6 +1,7 @@
 
 body {
     background: linear-gradient(135deg, #f0f4c3, #c8e6c9);
+    background: repeating-radial-gradient(circle at center, #f0f4c3, #c8e6c9 150px);
     height: 100vh;
     display: flex;
     justify-content: center;   /* horizontal center */
